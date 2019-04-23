@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Book Sale</string>
+    <string name="button0">书城</string>
+    <string name="button1">分类</string>
+    <string name="button2">发现</string>
+    <string name="button3">我</string>
+    <string name="action_settings">Settings</string>
+</resources>

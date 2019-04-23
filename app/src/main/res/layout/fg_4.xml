@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:gravity="center_horizontal">
+
+     <RadioGroup
+         android:id="@+id/radioGroup2"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:weightSum="4"
+         android:background="#fafafa">
+
+         <RadioButton
+             android:id="@+id/Login"
+             style="@style/radioStyle"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:checked="false"
+             android:text="登录"
+             android:drawableTop="@drawable/login"
+             android:textColor="@drawable/selector_tv_fen" />
+         <View
+             android:layout_height="55dp"
+             android:layout_width="1dp"
+             android:background="#d9d9d9"
+             />
+         <TextView
+             android:id="@+id/textView2"
+             android:layout_width="150dp"
+             android:layout_height="match_parent"
+             android:text="用户名显示"
+             android:textColor="@color/colorPrimaryDark"
+             android:textSize="25sp" />
+   </RadioGroup>
+
+    <View
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="#d9d9d9"
+        />
+
+
+</LinearLayout>
