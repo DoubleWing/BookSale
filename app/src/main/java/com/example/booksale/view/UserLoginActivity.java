@@ -7,18 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.booksale.R;
-import com.example.booksale.fragment.HomeFragment;
+import com.example.booksale.activity.MainActivity;
 import com.example.booksale.model.User;
 import com.example.booksale.presenter.UserLoginPresenter;
 
 //LoginView的实现类————就是LoginActivity
 public class UserLoginActivity extends AppCompatActivity implements IUserLoginView
 {
-
-
+    private static final int REQUEST_CODE_GO_TO_REGIST = 100;
+    private TextView mTvReglister;
     private EditText mEtUsername, mEtPassword;
     private Button mBtnLogin, mBtnClear;
     private ProgressBar mPbLoading;
@@ -38,11 +39,21 @@ public class UserLoginActivity extends AppCompatActivity implements IUserLoginVi
     {
         mEtUsername = (EditText) findViewById(R.id.login_edit_account);
         mEtPassword = (EditText) findViewById(R.id.login_edit_pwd);
-
+        mTvReglister = (TextView) findViewById(R.id.login_text_reglister);
         mBtnClear = (Button) findViewById(R.id.btn_clear);
         mBtnLogin = (Button) findViewById(R.id.login_btn_login);
 
         mPbLoading = (ProgressBar) findViewById(R.id.progress_bar);
+
+
+        mTvReglister.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(UserLoginActivity.this, UserReglisterActivity.class);
+                startActivity(intent);
+            }
+                                        });
+
 
         mBtnLogin.setOnClickListener(new View.OnClickListener()
         {
@@ -51,7 +62,7 @@ public class UserLoginActivity extends AppCompatActivity implements IUserLoginVi
             {
                 mUserLoginPresenter.login();
                 //启动
-               startActivity(intent);
+
             }
         });
 
@@ -109,8 +120,10 @@ public class UserLoginActivity extends AppCompatActivity implements IUserLoginVi
     {
         Toast.makeText(this, user.getUsername() +
                 " login success , to MainActivity", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(UserLoginActivity.this, HomeFragment.class);
-
+        //跳转到主页面
+        Intent intent = new Intent(UserLoginActivity.this, MainActivity.class);
+//        startActivityForResult(intent,REQUEST_CODE_GO_TO_REGIST);
+        startActivity(intent);
 
     }
 

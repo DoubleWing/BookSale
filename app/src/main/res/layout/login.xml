@@ -21,12 +21,14 @@
             android:ellipsize="marquee"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
         <Button
             android:id="@+id/button_backward"
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:drawableLeft="@drawable/back"
             android:background="#fafafa"/>
+
     </RelativeLayout>
 
     <View
@@ -41,20 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         >
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="注册"
-            android:id="@+id/login_btn_register"
-            android:onClick="resetpwd"
-            android:textColor="#ffffff"
-            android:background="#00EE00"
-            android:textSize="20dp"
-            android:layout_below="@+id/login_btn_login"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp" />
 
         <Button
             android:layout_width="fill_parent"
@@ -126,9 +114,9 @@
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
-            android:text="修改密码"
+            android:text="用户注册"
             android:textColor="@color/colorPrimaryDark"
-            android:id="@+id/login_text_change_pwd"
+            android:id="@+id/login_text_reglister"
             android:layout_below="@+id/login_edit_pwd"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -142,7 +130,7 @@
             android:onClick="finish_clear"
             android:textSize="20dp"
             android:textColor="#ffffff"
-            android:layout_below="@+id/login_text_change_pwd"
+            android:layout_below="@+id/login_text_reglister"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="1dp"  />
@@ -156,10 +144,7 @@
             android:paddingTop="20dp"
             android:progress="50"
             android:visibility="invisible"
-            android:layout_below="@+id/login_btn_register"/>
-
-
-
+            android:layout_below="@+id/login_btn_login"/>
 
     </RelativeLayout>
 

@@ -18,8 +18,6 @@ public class JsonUtils {
         Log.d(UserLoginActivity.TAG,"password = " + user1.getPassword());
         System.out.print(user1.getId());
 
-
-
         return user1;
     }
 

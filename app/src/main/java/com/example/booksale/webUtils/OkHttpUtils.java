@@ -30,9 +30,6 @@ public class OkHttpUtils {
         Request request = new Request.Builder().url(url).post(requestBody).build();
         client.newCall(request).enqueue(callback);
 
-
-
-
     }
 
 

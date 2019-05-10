@@ -5,6 +5,18 @@ public class User {
     private String password ;
     private int id;
 
+//    public User(String username, String password) {
+//        this.username = username;
+//        this.password = password;
+//    }
+//    @Override
+//    public String toString() {
+//        return "UserLoginBean{" +
+//                "Username='" + username + '\'' +
+//                ", password='" + password + '\'' +
+//                '}';
+//    }
+
     public int getId()
     {
         return id;
@@ -14,7 +26,6 @@ public class User {
     {
         this.id = id;
     }
-
 
     public String getUsername()
     {

@@ -3,22 +3,22 @@ package com.example.booksale.presenter;
 
 import android.os.Handler;
 
-import com.example.booksale.biz.IUserBiz;
+import com.example.booksale.biz.IUserLoginBiz;
 import com.example.booksale.biz.OnLoginListener;
-import com.example.booksale.biz.UserBiz;
+import com.example.booksale.biz.LoginBiz;
 import com.example.booksale.model.User;
 import com.example.booksale.view.IUserLoginView;
 
 public class UserLoginPresenter {
 
-    private IUserBiz userBiz;
+    private IUserLoginBiz userBiz;
     private IUserLoginView userLoginView;
     private Handler mHandler = new Handler();
 
     public UserLoginPresenter(IUserLoginView userLoginView)
     {
         this.userLoginView = userLoginView;
-        this.userBiz = new UserBiz();
+        this.userBiz = new LoginBiz();
     }
 
     public void login()

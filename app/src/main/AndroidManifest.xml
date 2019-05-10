@@ -18,7 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
         <activity android:name="com.example.booksale.view.UserLoginActivity"></activity>
+            <activity android:name="com.example.booksale.view.UserReglisterActivity"></activity>
+
 
     </application>
 
